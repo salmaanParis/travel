@@ -4,7 +4,7 @@ import Button from '@/components/Button';
 
 const AboutUs = () => {
   return (
-    <div className="bg-gradient-to-b from-blue-50 to-white">
+    <div id='about' className="bg-gradient-to-b from-blue-50 to-white">
       <div className="container mx-auto px-4 py-12">
         <div className="flex flex-col lg:flex-row items-center">
           {/* Image Covering the Left Side */}

@@ -70,7 +70,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form id='contact' onSubmit={handleSubmit} className="space-y-6">
       <Input
         label="Name"
         type="text"

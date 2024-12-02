@@ -127,7 +127,7 @@ const DestinationPopup = React.memo(({ dest, onClose }) => {
       exit={{ opacity: 0, y: 50 }}
       className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
     >
-      <section id='featureDestination' className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-hidden">
+      <section id="featureDestination" className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-hidden">
         <div className="relative h-64">
           <img src={dest.image} alt={dest.name} className="w-full h-full object-cover" loading="lazy" />
           <button
@@ -319,7 +319,7 @@ export default function FeaturedDestinations() {
   ), [filter, destinations]);
 
   return (
-    <section className="py-20 bg-gradient-to-b from-blue-100 to-blue-50">
+    <section id='featureDestination' className="py-20 bg-gradient-to-b from-blue-100 to-blue-50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Featured Destinations</h2>
