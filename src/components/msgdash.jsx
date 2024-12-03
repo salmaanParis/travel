@@ -6,7 +6,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/contact');
+        const response = await fetch('https://backend-toptal.onrender.com/api/contact');
         if (response.ok) {
           const data = await response.json();
           setMessages(data);

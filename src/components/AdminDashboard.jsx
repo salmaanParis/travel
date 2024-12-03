@@ -33,7 +33,7 @@ function EditDestinationModal({ destination, onClose, onSave }) {
     e.preventDefault();
     try {
       const response = await fetch(
-        destination ? `http://localhost:5000/api/destinations/${destination._id}` : 'http://localhost:5000/api/destinations',
+        destination ? `https://backend-toptal.onrender.com/api/destinations/${destination._id}` : 'https://backend-toptal.onrender.com/api/destinations',
         {
           method: destination ? 'PUT' : 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -185,9 +185,9 @@ export default function AdminDashboard() {
     const fetchData = async () => {
       try {
         const [destResponse, msgResponse, bookingResponse] = await Promise.all([
-          fetch('http://localhost:5000/api/destinations'),
-          fetch('http://localhost:5000/api/contact'),
-          fetch('http://localhost:5000/api/bookings')
+          fetch('https://backend-toptal.onrender.com/api/destinations'),
+          fetch('https://backend-toptal.onrender.com/api/contact'),
+          fetch('https://backend-toptal.onrender.com/api/bookings')
         ]);
         const destData = await destResponse.json();
         const msgData = await msgResponse.json();
@@ -204,7 +204,7 @@ export default function AdminDashboard() {
 
   const deleteDestination = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/destinations/${id}`, {
+      const response = await fetch(`https://backend-toptal.onrender.com/api/destinations/${id}`, {
         method: 'DELETE',
       });
       if (!response.ok) {
@@ -218,7 +218,7 @@ export default function AdminDashboard() {
 
   const deleteBooking = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/bookings/${id}`, {
+      const response = await fetch(`https://backend-toptal.onrender.com/api/bookings/${id}`, {
         method: 'DELETE',
       });
       if (!response.ok) {
@@ -232,7 +232,7 @@ export default function AdminDashboard() {
 
   const deleteMessage = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/contact/${id}`, {
+      const response = await fetch(`https://backend-toptal.onrender.com/api/contact/${id}`, {
         method: 'DELETE',
       });
       if (!response.ok) {
