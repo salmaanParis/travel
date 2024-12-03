@@ -89,7 +89,7 @@ const DestinationPopup = React.memo(({ dest, onClose }) => {
     };
 
     try {
-      const response = await fetch('http://localhost:5000/api/bookings', {
+      const response = await fetch('https://backend-toptal.onrender.com/api/bookings', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -298,7 +298,7 @@ export default function FeaturedDestinations() {
   useEffect(() => {
     const fetchDestinations = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/destinations');
+        const response = await fetch('https://backend-toptal.onrender.com/api/destinations');
         if (!response.ok) throw new Error('Failed to fetch');
         const data = await response.json();
         setDestinations(data.destinations || []);
