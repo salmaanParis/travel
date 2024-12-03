@@ -1,15 +1,24 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, ChevronRight } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Mail,
+  Phone,
+  MapPin,
+  ChevronRight,
+} from "lucide-react";
 
 const socialIcons = [
-  { Icon: Facebook, href: '#' },
-  { Icon: Twitter, href: '#' },
-  { Icon: Instagram, href: '#' },
-  { Icon: Linkedin, href: '#' },
+  { Icon: Facebook, href: "#" },
+  { Icon: Twitter, href: "#" },
+  { Icon: Instagram, href: "#" },
+  { Icon: Linkedin, href: "#" },
 ];
 
-const quickLinks = ['Home', 'Destinations', 'Packages', 'Services', 'Contact'];
+const quickLinks = ["Home", "Destinations", "Packages", "Services", "Contact"];
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -25,13 +34,21 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
           >
             <h3 className="text-2xl font-bold mb-6 text-gold">About TOPTAL</h3>
-            <p className="text-gray-300 mb-6">Luxury travel experiences tailored to your dreams. Explore the world with unparalleled comfort and style.</p>
+            <p className="text-gray-300 mb-6">
+              Luxury travel experiences tailored to your dreams. Explore the
+              world with unparalleled comfort and style.
+            </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-gold text-black font-semibold py-2 px-4 rounded-full bg-white transition duration-300"
             >
-              Discover More
+              <Link
+                to={isAdmin ? "/dashboard" : "/admin-login"}
+                className="text-black"
+              >
+                Admin
+              </Link>
             </motion.button>
           </motion.div>
 
@@ -43,8 +60,15 @@ const Footer = () => {
             <h3 className="text-2xl font-bold mb-6 text-gold">Quick Links</h3>
             <ul className="space-y-3">
               {quickLinks.map((item) => (
-                <motion.li key={item} whileHover={{ x: 5 }} transition={{ type: 'spring', stiffness: 300 }}>
-                  <a href={`#${item.toLowerCase()}`} className="text-gray-300 hover:text-gold transition duration-300 flex items-center">
+                <motion.li
+                  key={item}
+                  whileHover={{ x: 5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <a
+                    href={`#${item.toLowerCase()}`}
+                    className="text-gray-300 hover:text-gold transition duration-300 flex items-center"
+                  >
                     <ChevronRight className="w-4 h-4 mr-2" />
                     {item}
                   </a>
@@ -62,7 +86,11 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin className="w-5 h-5 mr-3 text-gold flex-shrink-0 mt-1" />
-                <p className="text-gray-300">Silpaiswar Building, 2nd Floor, Karamana PO<br />Thiruvananthapuram, India, Kerala</p>
+                <p className="text-gray-300">
+                  Silpaiswar Building, 2nd Floor, Karamana PO
+                  <br />
+                  Thiruvananthapuram, India, Kerala
+                </p>
               </li>
               <li className="flex items-center">
                 <Phone className="w-5 h-5 mr-3 text-gold" />
@@ -70,7 +98,12 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Mail className="w-5 h-5 mr-3 text-gold" />
-                <a href="mailto:info@taptal.com" className="text-gray-300 hover:text-gold transition duration-300">toptaltravelconsultancy@gmail.com</a>
+                <a
+                  href="mailto:info@taptal.com"
+                  className="text-gray-300 hover:text-gold transition duration-300"
+                >
+                  toptaltravelconsultancy@gmail.com
+                </a>
               </li>
             </ul>
           </motion.div>
@@ -94,7 +127,9 @@ const Footer = () => {
               ))}
             </div>
             <div className="mt-8">
-              <h4 className="text-lg font-semibold mb-4 text-gold">Subscribe to Our Newsletter</h4>
+              <h4 className="text-lg font-semibold mb-4 text-gold">
+                Subscribe to Our Newsletter
+              </h4>
               <form className="flex">
                 <input
                   type="email"
@@ -119,7 +154,10 @@ const Footer = () => {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="mt-12 pt-8 border-t border-gray-800 text-center"
         >
-          <p className="text-gray-400">&copy; {currentYear} Toptal travel cunsultancy  . All rights reserved.</p>
+          <p className="text-gray-400">
+            &copy; {currentYear} Toptal travel cunsultancy . All rights
+            reserved.
+          </p>
         </motion.div>
       </div>
     </footer>
@@ -127,5 +165,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-
