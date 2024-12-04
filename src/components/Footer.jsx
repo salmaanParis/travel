@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, ChevronRight } from 'lucide-react';
 
 const socialIcons = [
-  { Icon: Facebook, href: '#' },
+  { Icon: Facebook, href: 'https://www.facebook.com/p/Toptal-travel-cunsultancy-61551901812210/?_rdr' },
   { Icon: Twitter, href: '#' },
-  { Icon: Instagram, href: '#' },
+  { Icon: Instagram, href: 'https://www.instagram.com/toptaltravels/' },
   { Icon: Linkedin, href: '#' },
 ];
 
