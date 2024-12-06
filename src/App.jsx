@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 import WhatsAppChat from './components/WhatsAppChat';
 import BackToTop from './components/BackToTop';
 import ExtraServices from './components/ExtraServices';
-import AboutUs from './components/AboutUs'; // Consistent naming
+import AboutUs from './components/AboutUs'; 
 import DestinationDashboard from './components/AdminDashboard';
 import AdminLogin from './components/AdminLogin'; // Import Admin Login Page
 import TravelChatbot from './components/chatbot';
@@ -32,7 +32,7 @@ const App = () => {
               <FeaturedDestinations />
               <Services />
               <ExtraServices />
-              <AboutUs />
+              <AboutUs/>
               <Testimonials />
               <CallToAction />
               <Footer />
