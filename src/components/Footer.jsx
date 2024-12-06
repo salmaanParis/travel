@@ -34,7 +34,7 @@ const Footer = () => {
               className="bg-gold text-black font-semibold py-2 px-4 rounded-full bg-white transition duration-300"
               onClick={() => navigate("/admin-login")} // Correct usage of navigate function
             >
-              Admin Login
+            Agent
             </motion.button>
           </motion.div>
 
