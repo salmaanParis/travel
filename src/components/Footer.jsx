@@ -27,12 +27,13 @@ const Footer = () => {
             <h3 className="text-2xl font-bold mb-6 text-gold">About TOPTAL</h3>
             <p className="text-gray-300 mb-6">Luxury travel experiences tailored to your dreams. Explore the world with unparalleled comfort and style.</p>
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gold text-black font-semibold py-2 px-4 rounded-full bg-white transition duration-300"
-            >
-              Discover More
-            </motion.button>
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  className="bg-gold text-black font-semibold py-2 px-4 rounded-full bg-white transition duration-300"
+  onClick={() => (window.location.href = '/admin-login')} // Redirect to /admin-log
+>
+  Admin Login
+</motion.button>
           </motion.div>
 
           <motion.div
