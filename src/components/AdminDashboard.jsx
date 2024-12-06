@@ -261,8 +261,15 @@ export default function AdminDashboard() {
 
   return (
     <div className="container mx-auto p-6">
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-3xl font-bold">Admin Dashboard</h1>
+    <div className="flex justify-between items-center mb-6">
+      <h1 className="text-3xl font-bold">Admin Dashboard</h1>
+      <div className="flex space-x-4">
+        <button
+          onClick={() => navigate('/')} // Navigate to home page
+          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+        >
+          Home
+        </button>
         <button
           onClick={handleLogout}
           className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded"
@@ -270,6 +277,7 @@ export default function AdminDashboard() {
           Logout
         </button>
       </div>
+    </div>
       
       <div className="mb-6">
         <div className="flex border-b border-gray-200">
