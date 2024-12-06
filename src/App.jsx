@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 import WhatsAppChat from './components/WhatsAppChat';
 import BackToTop from './components/BackToTop';
 import ExtraServices from './components/ExtraServices';
-import AboutUs from './components/Aboutus';
+import AboutUs from './components/AboutUs'; // Consistent naming
 import DestinationDashboard from './components/AdminDashboard';
 import AdminLogin from './components/AdminLogin'; // Import Admin Login Page
 import TravelChatbot from './components/chatbot';
@@ -21,48 +21,39 @@ const App = () => {
 
   return (
     <Router>
-      <div>
-        <Routes>
-          {/* Public routes */}
-          <Route
-            path="/"
-            element={
-              <>
-                <Navbar />
-                <Hero />
-                <FeaturedDestinations />
-                <Services />
-                <ExtraServices />
-                <AboutUs />
-                <Testimonials />
-                <CallToAction />
-                <Footer />
-                <WhatsAppChat />
-                <BackToTop />
-                
-                {/* Adding the Chatbot */}
-                <TravelChatbot />
-              </>
-            }
-          />
+      <Routes>
+        {/* Public routes */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar />
+              <Hero />
+              <FeaturedDestinations />
+              <Services />
+              <ExtraServices />
+              <AboutUs />
+              <Testimonials />
+              <CallToAction />
+              <Footer />
+              <WhatsAppChat />
+              <BackToTop />
+              <TravelChatbot />
+            </>
+          }
+        />
 
-          {/* Admin Login route */}
-          <Route path="/admin-login" element={<AdminLogin setIsAdmin={setIsAdmin} />} />
+        {/* Admin Login route */}
+        <Route path="/admin-login" element={<AdminLogin setIsAdmin={setIsAdmin} />} />
 
-          {/* Protected Admin route */}
-          {isAdmin ? (
-            <Route path="/dashboard" element={<DestinationDashboard />} />
-          ) : (
-            <Route path="/dashboard" element={<Navigate to="/admin-login" />} />
-          )}
-        </Routes>
-      </div>
+        {/* Protected Admin route */}
+        <Route
+          path="/dashboard"
+          element={isAdmin ? <DestinationDashboard /> : <Navigate to="/admin-login" />}
+        />
+      </Routes>
     </Router>
   );
 };
 
 export default App;
-
-
-
-
