@@ -18,7 +18,7 @@ const AboutUs = () => {
               Discover the World with Us
             </h1>
             <p className="text-gray-600 mb-8">
-              With more than 4 years in the tourism industry, we are passionate about connecting you with the unique cultures and experiences each destination offers. Leave the guidebooks behind and immerse yourself in the adventure!
+              With more than 1 year in the tourism industry, we are passionate about connecting you with the unique cultures and experiences each destination offers. Leave the guidebooks behind and immerse yourself in the adventure!
             </p>
 
             {/* Services */}
