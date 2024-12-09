@@ -22,7 +22,7 @@ const DestinationCard = React.memo(({ dest, onClick }) => (
     </div>
     <div className="p-6">
       <h3 className="text-2xl font-semibold mb-2 group-hover:text-blue-600 transition-colors duration-300">{dest.name}</h3>
-      <p className="text-gray-600 mb-2">{dest.description}</p>
+      {/* <p className="text-gray-600 mb-2">{dest.description}</p> */}
       <p className="text-sm text-gray-800 mb-4">{dest.duration} | {dest.price}</p>
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-2">
